@@ -27,7 +27,7 @@ def make_env(env_id: str, rank: int, seed: int = 0):
 
 if __name__ == "__main__":
     env_id = "PandaReachDense-v3"
-    num_cpu = 6
+    num_cpu = 10
 
     env = make_vec_env(env_id, n_envs=num_cpu, seed=0, vec_env_cls=SubprocVecEnv)
     model = A2C(policy="MultiInputPolicy", env=env, verbose=1)

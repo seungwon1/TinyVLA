@@ -13,7 +13,7 @@ observation, info = env.reset()
 # load a model
 model = A2C.load("data/a2c_panda_reach", env)
 
-for _ in range(1000):
+for _ in range(200):
     # current_position = observation["observation"][0:3]
     # desired_position = observation["desired_goal"][0:3]
     # action = 5.0 * (desired_position - current_position)
@@ -21,6 +21,6 @@ for _ in range(1000):
     observation, reward, terminated, truncated, info = env.step(action)
     if terminated or truncated:
         observation, info = env.reset()
-    time.sleep(0.1)
+    time.sleep(0.2)
 
 env.close()
