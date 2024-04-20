@@ -1,10 +1,8 @@
 # %%
 import gymnasium as gym
-import panda_gym
-
-print(panda_gym.__version__)
-# from IPython.display import Image
+import panda_gym  # noqa: F401
 from PIL import Image
+
 
 env = gym.make("PandaReach-v3", render_mode="rgb_array", renderer="OpenGL")
 env.reset()
