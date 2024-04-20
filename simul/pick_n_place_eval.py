@@ -4,6 +4,7 @@ import gymnasium as gym
 import panda_gym
 from stable_baselines3 import PPO
 
+
 print("panda-gym version:", panda_gym.__version__)
 
 
