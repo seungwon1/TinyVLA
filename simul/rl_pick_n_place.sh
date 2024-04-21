@@ -1,2 +1,1 @@
-python train.py --algo tqc --env PandaPickAndPlace-v1 -f logs/
-# Upload the model and generate video (when possible)
+python -m rl_zoo3.train --algo tqc --env PandaPickAndPlace-v1 -f logs/
