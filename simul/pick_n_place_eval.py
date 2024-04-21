@@ -1,20 +1,15 @@
 import time
 
 import gymnasium as gym
-import panda_gym
-from stable_baselines3 import PPO
-
-
-print("panda-gym version:", panda_gym.__version__)
-
+import panda_gym  # noqa: F401
+from sb3_contrib import TQC
 
 env_name = "PandaPickAndPlace-v3"
-
 env = gym.make(env_name, render_mode="human")
 observation, info = env.reset()
 
 # load a model
-model = PPO.load("data/ppo_panda_pick_and_place", env)
+model = TQC.load("data/PandaPickAndPlace-v3", env)
 
 for _ in range(1000):
     action, _ = model.predict(observation)
